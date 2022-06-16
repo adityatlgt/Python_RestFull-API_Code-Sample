@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <title>Booking Form</title>
+    <head></head>
+    <body>
+        <p style="padding:10px;color:white;background-color:brown;">
+            Booking Form
+        </p>
+        <p style="margin-top:50px;">
+            <center>
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Email:</td>
+                            <td><input type="email" name="email" id="id_email" required></td>
+                        </tr>
+                        <tr>
+                            <td>Mobile:</td>
+                            <td><input type="text" name="mobile" id="id_mobile" required></td>
+                        </tr>
+                        <tr>
+                            <td>Select Show:</td>
+                            <td>
+                                <select id="id_show" name="show_booked">
+                                    {% for x in movies %}
+                                    <option value="{{ x.id }}">{{ x.movie_name }} - {{ x.multiplex }} - {{ x.show_timing }} - {{ x.city }}</option>
+                                    {% endfor %}
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <button type="submit">Submit</button>
+                </p>
+            </form>
+            </center>
+        </p>
+    </body>
+</html>

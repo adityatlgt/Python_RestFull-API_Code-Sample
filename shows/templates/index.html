@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <title>Booking API</title>
+    <head></head>
+    <body>
+        <p style="padding:10px;color:white;background-color:brown;">
+            Welcome to the BOOKMOVIES API SERVER
+        </p>
+        <p style="margin-top:50px;">
+            <center>
+            <ul>
+                <li><a href="{% url 'usersapi' %}">users API</a></li>
+                <li><a href="{% url 'showsapi' %}">shows API</a></li>
+                <li><a href="{% url 'bookingsapi' %}">Bookings API</a></li>
+                <li><a href="{% url 'newscreenapi' %}">New Screen API</a></li>
+                <li><a href="{% url 'newbookingapi' %}">New Booking API</a></li>
+                <li><a href="{% url 'bookingformapi' %}">Booking Form API</a></li>
+                <li><a href="{% url 'sendemail' %}">SendEmail API (multi-processing)</a></li>
+            </ul>
+            </center>
+        </p>
+    </body>
+</html>
